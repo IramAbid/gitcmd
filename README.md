@@ -245,12 +245,86 @@ If you encounter conflicts and decide to abort the merge:
 git merge --abort: This command stops the merge process and returns the branch to its previous state.
 
 
-# git diff --staged or git diff --cached: Shows the changes between the staging area and the last commit
+# git mergetool
 
-# git diff <commit>: changes between working directory and a specific commit
+git config --global merge.tool kdiff3
 
-# git diff <commit1> <commit2>: changes between 2 commits
+git mergetool --tool=<tool_name>
+
+# git log
+
+1. Basic Log
+To view the commit history:
+
+git log: This command shows the list of commits in the repository in reverse chronological order (most recent commits first).
+
+2. Log with One Line Per Commit
+
+To view a simplified log with one line per commit:
+git log --oneline: This command displays each commit on a single line, showing the abbreviated commit hash and commit message.
+
+3. Log with Graph
+To view the log with a graphical representation of the branch history:
+git log --graph: This command adds a graphical representation of the commit history.
+
+4. Log with Author Information
+
+To view the commit history with author information:
+git log --author=<author_name>
+Example: git log --author="John Doe"
+This command shows commits made by "John Doe".
+
+5. Log with Date Range
+To view commits made within a specific date range:
+
+git log --since=<date> --until=<date>
+Example: git log --since="2024-01-01" --until="2024-06-21"
+This command shows commits made between January 1, 2024, and June 1, 2024.
+
+6. Log with Patch
+To view the log with the changes (diffs) introduced in each commit:
+
+git log -p: This command displays the diffs for each commit in the log.
+
+# The git stash command is used to save the changes in working directory temporarily so we can work on something else and then come back and reapply the changes later
+
+1. Stash Your Changes
+To stash your changes:
+
+git stash
+This command saves local modifications and reverts the working directory to match the HEAD commit.
+
+2. List Stashes
 
 
+git stash list: This command shows a list of all stashed changes.
 
+3. Apply Stash
+To reapply the latest stashed changes:
 
+git stash apply
+This command reapplies the latest stash to  working directory. 
+
+If want to apply a specific stash, use the stash reference from git stash list:
+git stash apply stash@{<index>}
+Example: git stash apply stash@{0}
+
+4. Pop Stash
+
+To apply the latest stash and remove it from the stash list:
+git stash pop: This command reapplies the latest stash and then removes it from the stash list. You can also specify a particular stash to pop:
+git stash pop stash@{<index>}
+Example: git stash pop stash@{0}
+5. Drop Stash
+
+To remove a stash from the list without applying it:
+git stash drop stash@{<index>}
+
+Example:git stash drop stash@{0}
+To drop the latest stash:
+
+git stash drop
+6. Clear All Stashes
+
+To remove all stashes:
+git stash clear
