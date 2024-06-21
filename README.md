@@ -426,7 +426,85 @@ This command removes any remote-tracking references that no longer exist on the 
 5. Fetch and Rebase
 To fetch updates and rebase your current branch onto the fetched branch:
 
-
 git fetch <remote> <branch> && git rebase <remote>/<branch>
+
 Example: git fetch origin main && git rebase origin/main
 This command fetches the main branch from the origin remote and rebases your current branch onto origin/main.
+
+# git pull: This command combines git fetch (which downloads commits, files, and refs from a remote repository) with git merge (which integrates the fetched changes into your current branch).
+
+git pull origin
+
+1. Push to the Default Remote Repository
+To push your changes to the default remote repository (usually named origin):
+
+git push: This command pushes all local commits that are not yet in the remote repository.
+
+2. Push to a Specific Remote and Branch
+To push changes to a specific remote repository and branch:
+
+git push <remote_name> <branch_name>
+Example: git push origin main
+This command pushes the local changes from the main branch to the origin remote repository.
+
+3. Pushing Tags
+To push tags to the remote repository:
+
+git push --tags
+This command pushes all local tags to the remote repository.
+
+4. Force Pushing
+In some cases, you might need to force push to overwrite remote changes (use with caution):
+
+git push --force
+5. Pushing Specific Commits
+To push specific commits instead of all local changes:
+
+git push <remote_name> <commit_hash>:<branch_name>
+Example: git push origin abc1234:main
+This command pushes the specific commit abc1234 to the main branch of the origin remote.
+
+# git remote command is used to manage the set of tracked repositories (remotes) for local repository. It allows you to add, remove, and modify remotes.
+
+
+1. List All Remotes
+To list all remote repositories associated with local repository:
+
+
+git remote -v
+This command shows the names of all remotes and their URLs.
+
+2. Add a New Remote
+To add a new remote repository:
+
+git remote add <name> <url>
+Example:
+
+git remote add origin https://github.com/user/repo.git
+This command adds a new remote named origin with the specified URL.
+
+3. Remove a Remote
+To remove a remote repository:
+
+git remote remove <name>
+Example:
+
+git remote remove origin
+This command removes the remote named origin.
+
+4. Rename a Remote
+To rename a remote repository:
+
+git remote rename <old_name> <new_name>
+Example:
+
+git remote rename origin upstream
+This command renames the remote from origin to upstream.
+
+5. Show Remote Information
+To show detailed information about a remote:
+
+git remote show <name>
+Example:
+
+git remote show origin
