@@ -76,3 +76,12 @@ Give the output in the long-format. This is the default.
 
 # git restore README.md : restore file to last commit
 # git restore . : restore all files to last commit
+
+
+ git restore --staged README.md: it will restore from the staging area
+
+ git restore --staged . : Restore All Files from Staging Area
+
+ git restore --source=<commit_hash> <file>: Restore a File to a Specific Commit eg: 7b09e30
+
+
