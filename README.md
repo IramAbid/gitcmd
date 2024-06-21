@@ -86,6 +86,7 @@ Give the output in the long-format. This is the default.
 
  # git-reset - Reset current HEAD to the specified state
 
- 
+git reset HEAD README.md: Unstages the changes in the staging area but keeps the changes in the working directory.
+
 
 
