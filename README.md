@@ -163,6 +163,7 @@ git branch branchName : create new branch
 git branch -a : show all branches
 
 git branch (-m | -M) [<oldbranch>] <newbranch>
+
 git branch (-c | -C) [<oldbranch>] <newbranch>
 
 git branch (-M | -m) : <oldbranch> will be renamed to <newbranch>. If <oldbranch> had a corresponding reflog, it is renamed to match <newbranch> and a reflog entry is created to remember the branch renaming. If <newbranch> exists, -M must be used to force the rename to happen.
@@ -175,16 +176,24 @@ Move/rename a branch, together with its config and reflog.
 Shortcut for --move --force.
 
 -c
+
 --copy
+
 Copy a branch, together with its config and reflog.
 
 -C
+
 Shortcut for --copy --force.
 
 
 
+# git checkout
 
+git checkout -b branchname: creates a branch and switch to it
 
+git checkout branchname : switch from current to branchname
+
+git checkout -- README.md : restore a specific file to its state in the last commit
 
 
 
