@@ -645,6 +645,9 @@ Example:
 git shortlog HEAD~10..HEAD
 This command shows the shortlog for the last 10 commits.
 
+
+
+
 4. Show Commit Messages
 To include the commit messages in the shortlog output:
 
@@ -672,10 +675,11 @@ The git apply command is used to apply a patch to files and/or the index. It is 
 git apply <patchfile>
 
 git diff --cached > fix_bug.patch
-
 # git cherry-pick <commit-hash>
 
 
 The git cherry-pick command is used to apply the changes introduced by an existing commit onto the current branch. This is particularly useful when you want to apply a specific commit from one branch to another without merging the entire branch.
 
 # rebase : The git rebase command is used to integrate changes from one branch into another. It helps to maintain a clean and linear project history by applying commits from one branch on top of another. Rebasing can be used to move or combine commits to streamline the history of your repository.
+
+# git revert <commit-hash>: The git revert command is used to create a new commit that undoes the changes made by a previous commit. Unlike git reset, which alters the commit history, git revert maintains the history and adds a new commit to reverse the changes. This is useful when need to undo changes but keep the history intact.
