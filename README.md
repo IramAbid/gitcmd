@@ -45,3 +45,7 @@ Show the branch and tracking info even in short-format.
 --long
 Give the output in the long-format. This is the default.
 
+# git diff : Shows the changes in the working directory that are not yet staged for the next commit
+
+
+
