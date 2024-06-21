@@ -88,5 +88,10 @@ Give the output in the long-format. This is the default.
 
 git reset HEAD README.md: Unstages the changes in the staging area but keeps the changes in the working directory.
 
+git reset --hard <commit_hash> Revert to a Previous Commit and Discard Changes (hard reset)
+git reset --soft <commit_hash> Revert to a Previous Commit (mixed reset)
+
+
+
 
 
