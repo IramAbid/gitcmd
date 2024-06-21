@@ -10,3 +10,5 @@ This repository contains usage of important git commands used during development
 # git config --system user.name "IramAbid" : Sets the user name for all users on the system (requires admin/root privileges)
 
 # git help --all or -a: Print all the available commands on the standard output.
+
+# git help --all --no-external-commands: exclude the listing of external "git-*" commands found in the $PATH
