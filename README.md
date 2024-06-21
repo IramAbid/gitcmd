@@ -65,3 +65,12 @@ Give the output in the long-format. This is the default.
 
 # git notes show : show the recent note to most recent commit
 
+# git notes list: list notes 
+
+# git notes remove: Remove a Note from the Most Recent Commit
+
+# git notes add -m "This is a note" <commit_hash>
+# git notes show <commit_hash>
+# git notes remove <commit_hash>
+
+
