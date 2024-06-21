@@ -151,6 +151,40 @@ Do nothing; only show what would happen
 --verbose
 Report the names of files as they are moved.
 
+eg: git mv -v  test2.txt testfile.txt  :change name of test2.txt to testfile.txt
+eg:  git mv test2.txt directory/ : Move the test2.txt to directory
+
+# Branching and Merging
+
+# git branch
+
+git branch branchName : create new branch
+
+git branch -a : show all branches
+
+git branch (-m | -M) [<oldbranch>] <newbranch>
+git branch (-c | -C) [<oldbranch>] <newbranch>
+
+git branch (-M | -m) : <oldbranch> will be renamed to <newbranch>. If <oldbranch> had a corresponding reflog, it is renamed to match <newbranch> and a reflog entry is created to remember the branch renaming. If <newbranch> exists, -M must be used to force the rename to happen.
+
+-m
+--move
+Move/rename a branch, together with its config and reflog.
+
+-M
+Shortcut for --move --force.
+
+-c
+--copy
+Copy a branch, together with its config and reflog.
+
+-C
+Shortcut for --copy --force.
+
+
+
+
+
 
 
 
