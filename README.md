@@ -84,12 +84,24 @@ Give the output in the long-format. This is the default.
 
  git restore --source=<commit_hash> <file>: Restore a File to a Specific Commit eg: 7b09e30
 
- # git-reset - Reset current HEAD to the specified state
+ # git reset - Reset current HEAD to the specified state
 
 git reset HEAD README.md: Unstages the changes in the staging area but keeps the changes in the working directory.
 
 git reset --hard <commit_hash> Revert to a Previous Commit and Discard Changes (hard reset)
+
 git reset --soft <commit_hash> Revert to a Previous Commit (mixed reset)
+
+# git rm: Move or rename a file, a directory, or a symlink(A symlink (also called a symbolic link) is a type of file in Linux that points to another file or a folder on your computer.)
+
+git rm <file>: Removes a file from the working directory and stages the removal for the next commit.
+
+git rm --cached <file>: Removes a file from the staging area but leaves it in the working directory.
+
+git rm -f <file>: Forces the removal of a file that has been modified or staged.
+
+git rm *.log: Removes multiple files matching a pattern (e.g., all .log files).
+
 
 
 
