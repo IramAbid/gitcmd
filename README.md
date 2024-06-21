@@ -7,3 +7,4 @@ This repository contains usage of important git commands used during development
 
 # git config --global user.name "IramAbid" : Sets the user name for all repositories for the current user. 
 
+# git config --system user.name "IramAbid" : Sets the user name for all users on the system (requires admin/root privileges)
