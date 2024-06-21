@@ -47,5 +47,12 @@ Give the output in the long-format. This is the default.
 
 # git diff : Shows the changes in the working directory that are not yet staged for the next commit
 
+# git diff --staged or git diff --cached: Shows the changes between the staging area and the last commit
+
+# git diff <commit>: changes between working directory and a specific commit
+
+# git diff <commit1> <commit2>: changes between 2 commits
+
+
 
 
