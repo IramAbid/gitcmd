@@ -25,5 +25,12 @@ This repository contains usage of important git commands used during development
 
 # git clone "https://github.com/IramAbid/gitcmd.git" : Clone a repository into a new directory  (possible flags --local --shared)
 
-# git add : Add file contents to the index
+# git add <file>: Add file contents to the index. 
+
+[--verbose | -v] 
+[--dry-run | -n] Don’t actually add the file(s), just show if they exist and/or will be ignored
+[--force | -f] Allow adding otherwise ignored files.
+[--edit | -e] Open the diff vs. the index in an editor and let the user edit it. After the editor was closed, adjust the hunk headers and apply the patch to the index.
+
+
 
