@@ -57,3 +57,11 @@ Give the output in the long-format. This is the default.
 
 # git diff <commit1> <commit2>: changes between 2 commits
 
+# git log : give the details of the commit (Author, Date, Commit Hash)
+
+# git notes add -m "message": add note to most recent commit
+
+# git notes add -f -m "message": to overwrite on added note to recent commit
+
+# git notes show : show the recent note to most recent commit
+
