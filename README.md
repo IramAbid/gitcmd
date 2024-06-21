@@ -17,4 +17,4 @@ This repository contains usage of important git commands used during development
 
 # git help --all -no-aliaises: When used with --all, exclude the listing of configured aliases.
 
-#g
+# git help -c or --config: List all available configuration variables. This is a short summary of the list in git-config
