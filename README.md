@@ -216,11 +216,33 @@ git switch [<options>] --orphan <new-branch> : To create an orphan branch, use:
 Example: git switch --orphan new-orphan-branch
 This command creates a new orphan branch named new-orphan-branch. An orphan branch starts with no commit history.
 
+# git merge command is used to combine multiple branches into one
+
+1. Basic merge 
+
+git merge <branch_name>: To merge a branch into your current branch
+
+2. Fast-Forward Merge
+
+git merge feature-branch : If there are no conflicts and the branches haven't diverged, this will be a fast-forward merge.
 
 
+3. Three-Way Merge
+If there are commits on both branches since their divergence, Git will perform a three-way merge.
 
+git merge feature-branch: This command will combine the histories of both branches and create a new merge commit.
 
+4. Merging with a Commit Message
+To provide a custom commit message for the merge commit:
 
+git merge -m "Your custom merge message" <branch_name>
+
+Example: git merge -m "Merging feature-branch into main" feature-branch
+
+5. Abort a Merge
+If you encounter conflicts and decide to abort the merge:
+
+git merge --abort: This command stops the merge process and returns the branch to its previous state.
 
 
 
