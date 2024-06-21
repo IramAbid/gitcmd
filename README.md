@@ -508,3 +508,174 @@ git remote show <name>
 Example:
 
 git remote show origin
+
+# git submodule
+
+The git submodule command is used to manage external repositories embedded within main repository. These external repositories, called submodules, are often used to include dependencies or libraries within a project.
+
+1. Add a Submodule
+To add a submodule to your repository:
+
+git submodule add <repository_url> <path>
+Example:
+
+git submodule add https://github.com/user/library.git libs/library
+This command adds the repository at the specified URL as a submodule located in the libs/library directory of your project.
+
+2. Initialize and Update Submodules
+To initialize and fetch data for a submodule:
+
+git submodule update --init
+To initialize and update all submodules recursively:
+
+git submodule update --init --recursive
+3. Cloning a Repository with Submodules
+When cloning a repository that contains submodules, use:
+
+git clone --recurse-submodules <repository_url>
+Example:
+
+git clone --recurse-submodules https://github.com/user/project.git
+This command clones the repository and initializes, fetches, and checks out all submodules.
+
+4. Updating Submodules
+To update submodules to the latest commit in their respective repositories:
+
+git submodule update --remote
+To update all submodules recursively:
+
+git submodule update --remote --recursive
+5. Removing a Submodule
+To remove a submodule, you need to:
+
+1.Delete the relevant section from the .gitmodules file.
+
+2.Delete the relevant section from .git/config.
+
+3.run
+git rm --cached <path_to_submodule>
+rm -rf <path_to_submodule>
+
+4.Commit the changes:
+git commit -m "Removed submodule <name>"
+
+# git show command is used to display various types of objects in Git. Typically, it is used to show the details of a specific commit, including the commit message, the author, and the changes made (diff). It can also be used to show the contents of tags, trees, and blobs.
+
+
+1. Show a Specific Commit
+To display the details of a specific commit, you need the commit hash:
+
+git show <commit_hash>
+Example:
+
+git show abc1234
+This command shows the commit message, author information, and the diff of the commit with hash abc1234.
+
+2. Show the Latest Commit
+To display the details of the latest commit:
+
+
+git show
+This command shows the most recent commit on the current branch.
+
+3. Show a Specific File from a Commit
+To display the details of a specific file from a particular commit:
+
+git show <commit_hash>:<file_path>
+Example:
+
+git show abc1234:README.md
+This command shows the contents of the README.md file as it was in the commit with hash abc1234.
+
+4. Show a Tag
+To display the details of a tag:
+
+git show <tag_name>
+
+# git range-diff command is used to compare two ranges of commits. It shows the differences between the commits in the two ranges, allowing you to see what has changed between them.
+
+1. Basic Usage
+To compare two ranges of commits:
+
+git range-diff <range1> <range2>
+Example:
+
+git range-diff origin/main...feature-branch1 origin/main...feature-branch2
+This command compares the changes between the origin/main branch and feature-branch1 with the changes between origin/main and feature-branch2.
+
+2. Compare Two Branches
+To compare the commit history between two branches:
+
+git range-diff <branch1> <branch2>
+Exa
+
+git range-diff feature-branch1 feature-branch2
+This command shows the differences between the commit history of feature-branch1 and feature-branch2.
+
+3. Compare a Range and a Commit
+To compare a range of commits to a single commit:
+
+git range-diff <range> <commit>
+Example:
+
+git range-diff origin/main...feature-branch abc1234
+This command compares the changes between origin/main and feature-branch with the changes in commit abc1234.
+
+# git shortlog command is used to summarize git log output, typically grouping the commits by author and optionally by the commit message. It provides a concise view of the contributions to a project, making it easier to see who contributed and how many commits they made.
+
+
+1. Basic Usage
+To view a summary of commits grouped by author:
+
+git shortlog
+This command shows a list of authors and the commits they've made.
+
+2. Group by Commit Messages
+To group the commits by author and show commit messages:
+
+git shortlog -n -s
+-n sorts the output by the number of commits per author.
+-s displays the number of commits per author.
+3. Specify a Range
+
+To view the shortlog for a specific range of commits:
+git shortlog <range>
+Example:
+
+git shortlog HEAD~10..HEAD
+This command shows the shortlog for the last 10 commits.
+
+4. Show Commit Messages
+To include the commit messages in the shortlog output:
+
+git shortlog -n
+This command shows the commits grouped by author with commit messages.
+
+5. Format the Output
+To format the output in a specific way, use:
+
+git shortlog --format='%h %s'
+%h is the abbreviated commit hash.
+%s is the commit subject.
+
+# git describe
+
+git describe
+git describe <commit>
+git describe abc1234
+git describe --tags
+
+# git apply
+
+The git apply command is used to apply a patch to files and/or the index. It is useful for applying changes created by git diff or patches shared between team members. It allows you to apply changes without creating a commit, giving you the flexibility to review and test the changes first.
+
+git apply <patchfile>
+
+git diff --cached > fix_bug.patch
+
+# git cherry-pick <commit-hash>
+
+
+The git cherry-pick command is used to apply the changes introduced by an existing commit onto the current branch. This is particularly useful when you want to apply a specific commit from one branch to another without merging the entire branch.
+
+# rebase : The git rebase command is used to integrate changes from one branch into another. It helps to maintain a clean and linear project history by applying commits from one branch on top of another. Rebasing can be used to move or combine commits to streamline the history of your repository.
