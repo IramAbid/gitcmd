@@ -23,4 +23,5 @@ This repository contains usage of important git commands used during development
 
 # git help --user-interfaces: Print a list of the repository, command and file interfaces documentation on the standard output.
 
+# git clone "https://github.com/IramAbid/gitcmd.git" : Clone a repository into a new directory   
 
