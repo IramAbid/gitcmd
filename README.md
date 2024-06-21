@@ -20,3 +20,7 @@ This repository contains usage of important git commands used during development
 # git help -c or --config: List all available configuration variables. This is a short summary of the list in git-config
 
 # git help -g or --guides: Print a list of the Git concept guides on the standard output.
+
+# git help --user-interfaces: Print a list of the repository, command and file interfaces documentation on the standard output.
+
+
