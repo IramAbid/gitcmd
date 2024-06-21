@@ -84,4 +84,8 @@ Give the output in the long-format. This is the default.
 
  git restore --source=<commit_hash> <file>: Restore a File to a Specific Commit eg: 7b09e30
 
+ # git-reset - Reset current HEAD to the specified state
+
+ 
+
 
