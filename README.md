@@ -312,11 +312,11 @@ Example: git stash apply stash@{0}
 4. Pop Stash
 
 To apply the latest stash and remove it from the stash list:
-git stash pop: This command reapplies the latest stash and then removes it from the stash list. You can also specify a particular stash to pop:
+git stash pop: This command reapplies the latest stash and then removes it from the stash list. we can also specify a particular stash to pop:
 git stash pop stash@{<index>}
 Example: git stash pop stash@{0}
-5. Drop Stash
 
+5. Drop Stash
 To remove a stash from the list without applying it:
 git stash drop stash@{<index>}
 
@@ -324,7 +324,39 @@ Example:git stash drop stash@{0}
 To drop the latest stash:
 
 git stash drop
-6. Clear All Stashes
 
+6. Clear All Stashes
 To remove all stashes:
 git stash clear
+
+# git tag :  is used to create, list, delete, and manage tags in Git. Tags are used to mark specific points in a repository’s history
+
+1. List Tags:
+
+git tag
+2. Create a Lightweight Tag:
+
+git tag v1.0
+3. Create an Annotated Tag:
+
+git tag -a v1.0 -m "Version 1.0 release"
+
+4. Tagging a Specific Commit:
+
+git tag v1.0 abc1234
+
+5. Push All Tags to Remote Repository:
+
+git push origin --tags
+
+6. Push a Specific Tag:
+
+git push origin v1.0
+
+7. Delete a Tag Locally:
+
+git tag -d v1.0
+
+8. Delete a Tag from Remote Repository:
+
+git push origin --delete v1.0
