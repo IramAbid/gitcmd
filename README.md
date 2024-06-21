@@ -74,3 +74,5 @@ Give the output in the long-format. This is the default.
 # git notes remove <commit_hash>
 
 
+# git restore README.md : restore file to last commit
+# git restore . : restore all files to last commit
