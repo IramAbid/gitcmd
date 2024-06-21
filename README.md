@@ -189,11 +189,37 @@ Shortcut for --copy --force.
 
 # git checkout
 
-git checkout -b branchname: creates a branch and switch to it
+git checkout -b branchname : creates a branch and switch to it
 
 git checkout branchname : switch from current to branchname
 
 git checkout -- README.md : restore a specific file to its state in the last commit
+
+
+# git switch 
+
+git switch [<options>] [--no-guess] <branch>
+eg: git switch feature-branch
+
+git switch [<options>] --detach [<start-point>] : Switching to a Specific Commit (Detached HEAD)
+eg: git switch --detach 1a2b3c4d
+
+This command switches to a specific commit, detaching the HEAD.
+
+git switch [<options>] (-c|-C) <new-branch> [<start-point>] : To create a new branch and switch to it, use:
+-c creates a new branch.
+-C creates a new branch or resets it if it already exists.
+Example: git switch -c new-feature-branch : This command creates a new branch named new-feature-branch and switches to it.
+Example with start-point: git switch -c new-feature-branch 1a2b3c4d. This command creates a new branch named new-feature-branch at the specified commit 1a2b3c4d and switches to it.
+
+git switch [<options>] --orphan <new-branch> : To create an orphan branch, use:
+Example: git switch --orphan new-orphan-branch
+This command creates a new orphan branch named new-orphan-branch. An orphan branch starts with no commit history.
+
+
+
+
+
 
 
 
