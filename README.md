@@ -32,5 +32,16 @@ This repository contains usage of important git commands used during development
 [--force | -f] Allow adding otherwise ignored files.
 [--edit | -e] Open the diff vs. the index in an editor and let the user edit it. After the editor was closed, adjust the hunk headers and apply the patch to the index.
 
+# git status -Show the working tree status
 
+-s
+--short
+Give the output in the short-format.
+
+-b
+--branch
+Show the branch and tracking info even in short-format.
+
+--long
+Give the output in the long-format. This is the default.
 
