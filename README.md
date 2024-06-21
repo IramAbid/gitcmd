@@ -245,5 +245,12 @@ If you encounter conflicts and decide to abort the merge:
 git merge --abort: This command stops the merge process and returns the branch to its previous state.
 
 
+# git diff --staged or git diff --cached: Shows the changes between the staging area and the last commit
+
+# git diff <commit>: changes between working directory and a specific commit
+
+# git diff <commit1> <commit2>: changes between 2 commits
+
+
 
 
