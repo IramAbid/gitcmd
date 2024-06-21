@@ -360,3 +360,73 @@ git tag -d v1.0
 8. Delete a Tag from Remote Repository:
 
 git push origin --delete v1.0
+
+# git worktree : Manage multiple working trees attached to the same repository.
+
+1. Add a New Worktree
+
+To create a new worktree:
+git worktree add <path> <branch>
+Example:git worktree add ../new-feature-branch new-feature
+This command creates a new worktree at the specified path and checks out the specified branch.
+
+2. List Worktrees
+
+To list all the worktrees associated with the repository:
+git worktree list
+This command shows the paths and branches of all existing worktrees.
+
+3. Remove a Worktree
+To remove a worktree:
+git worktree remove <path>
+Example:
+
+git worktree remove ../new-feature-branch
+This command removes the specified worktree. Note that the worktree must be clean (no uncommitted changes) before it can be removed.
+
+4. Prune Worktrees
+To clean up worktrees that are no longer accessible:
+
+git worktree prune
+This command removes any references to worktrees that no longer exist.
+
+# git fetch:It is used to download commits, files, and refs from a remote repository into your local repository. It updates remote-tracking branches but does not modify working directory or current branch.
+
+
+1. Fetch from All Remotes
+To fetch updates from all remotes:
+
+git fetch --all
+This command retrieves updates from all configured remote repositories.
+
+2. Fetch from a Specific Remote
+To fetch updates from a specific remote:
+
+git fetch <remote>
+Example:
+
+git fetch origin
+This command fetches updates from the origin remote.
+
+3. Fetch Specific Branches
+To fetch a specific branch from a remote:
+
+git fetch <remote> <branch>
+Example:
+
+git fetch origin main
+This command fetches the main branch from the origin remote.
+
+4. Prune Deleted References
+To prune deleted references on the remote while fetching:
+
+git fetch --prune
+This command removes any remote-tracking references that no longer exist on the remote.
+
+5. Fetch and Rebase
+To fetch updates and rebase your current branch onto the fetched branch:
+
+
+git fetch <remote> <branch> && git rebase <remote>/<branch>
+Example: git fetch origin main && git rebase origin/main
+This command fetches the main branch from the origin remote and rebases your current branch onto origin/main.
