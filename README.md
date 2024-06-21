@@ -12,3 +12,5 @@ This repository contains usage of important git commands used during development
 # git help --all or -a: Print all the available commands on the standard output.
 
 # git help --all --no-external-commands: exclude the listing of external "git-*" commands found in the $PATH
+
+# git help --all --no-verbose: When used with --all, print description for all recognized commands. This is the default.
