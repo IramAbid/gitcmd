@@ -679,3 +679,4 @@ The git cherry-pick command is used to apply the changes introduced by an existi
 # rebase : The git rebase command is used to integrate changes from one branch into another. It helps to maintain a clean and linear project history by applying commits from one branch on top of another. Rebasing can be used to move or combine commits to streamline the history of your repository.
 
 # git revert <commit-hash>: The git revert command is used to create a new commit that undoes the changes made by a previous commit. Unlike git reset, which alters the commit history, git revert maintains the history and adds a new commit to reverse the changes. This is useful when need to undo changes but keep the history intact.
+
