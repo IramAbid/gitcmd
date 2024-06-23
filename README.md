@@ -625,7 +625,7 @@ This command compares the changes between origin/main and feature-branch with th
 
 
 1. Basic Usage
-To view a summary of commits grouped by author:
+To view a summary of commits grouped by author:rest
 
 git shortlog
 This command shows a list of authors and the commits they've made.
@@ -644,9 +644,6 @@ Example:
 
 git shortlog HEAD~10..HEAD
 This command shows the shortlog for the last 10 commits.
-
-
-
 
 4. Show Commit Messages
 To include the commit messages in the shortlog output:
@@ -676,7 +673,6 @@ git apply <patchfile>
 
 git diff --cached > fix_bug.patch
 # git cherry-pick <commit-hash>
-
 
 The git cherry-pick command is used to apply the changes introduced by an existing commit onto the current branch. This is particularly useful when you want to apply a specific commit from one branch to another without merging the entire branch.
 
